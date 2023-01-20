@@ -33,11 +33,11 @@ function Home() {
   }, [error]);
 
   return (
-    <div className={s.mainWrapper}>
+    <>
       <h2 className={s.title}>Trends of the week</h2>
       {isLoading && <Loader />}
       <MovieList movieList={trends} />
-    </div>
+    </>
   );
 }
 

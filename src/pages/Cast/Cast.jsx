@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Notify } from 'notiflix';
 import { getCast } from 'services/API';
-
-import s from './Cast.module.css';
 import { Loader } from 'components/Loader/Loader';
+import s from './Cast.module.css';
 
 function Cast() {
   const [movieCast, setMovieCast] = useState([]);
@@ -32,21 +31,29 @@ function Cast() {
     if (error === null) return;
     Notify.failure(`some error occured ${error}`);
   }, [error]);
-  
+
   return (
     <>
       {isLoading && <Loader />}
-      {Array.isArray(movieCast) &&
-        movieCast?.map(({ id, name, profile_path }) => {
-          return (
-            <li key={id} className={s.item}>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${profile_path}`}
-                alt={name}
-              />
-            </li>
-          );
-        })}
+      <ul className={s.list}>
+        {Array.isArray(movieCast) &&
+          movieCast?.map(({ id, name, profile_path }) => {
+            return (
+              <li key={id} className={s.item}>
+                <img
+                  className={s.img}
+                  src={
+                    profile_path
+                      ? `https://image.tmdb.org/t/p/w500${profile_path}`
+                      : 'https://upload.wikimedia.org/wikipedia/commons/2/2f/No-photo-m.png'
+                  }
+                  alt={name}
+                />
+                <h4 className={ s.name}>{name}</h4>
+              </li>
+            );
+          })}
+      </ul>
     </>
   );
 }
