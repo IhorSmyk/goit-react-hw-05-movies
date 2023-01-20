@@ -1,6 +1,7 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { Loader } from 'components/Loader/Loader';
+import clsx from 'clsx';
 import s from './App.module.css';
 
 const Home = lazy(() => import('pages/Home/Home'));
@@ -9,14 +10,23 @@ const MovieDetails = lazy(() => import('pages/MovieDetails/MovieDetails'));
 const NotFound = lazy(() => import('pages/NotFound/NotFound'));
 
 function App() {
+  const classNames = condition => {
+    return clsx({ [s.navLinkActive]: condition, [s.navLink]: true });
+  };
+
   return (
     <>
       <header>
-        <nav>
-          <NavLink className={s.NavLink} to="/">
+        <nav className={s.nav}>
+          <NavLink
+            className={({ isActive }) => classNames(isActive)}
+            to="/">
             Home
           </NavLink>
-          <NavLink className={s.NavLink} to="/movies">
+          <NavLink
+            className={({ isActive }) => classNames(isActive)}
+            to="/movies"
+          >
             Movies
           </NavLink>
         </nav>

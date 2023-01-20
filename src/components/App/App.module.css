@@ -1,15 +1,22 @@
-.NavLink {
+.nav {
+  padding: 10px;
+  display: flex;
+  column-gap: 10px;
+  background-color: #e0fcfd;
+  border-bottom: 1px solid #1a1211;
+}
+
+.navLink {
+  border-radius: 4px;
   display: inline-flex;
   padding: 20px;
-  border-bottom: 2px solid transparent;
   font-size: 22px;
-  margin-right: 15px;
   color: inherit;
   text-decoration: none;
   transition: all 250ms;
+  box-shadow: 2px 1px 5px #4b5fc2;
 }
 
-.NavLink.active {
-  border-bottom-color: blueviolet;
-  color: blueviolet;
+.navLinkActive {
+  background-color: #394f89;
 }

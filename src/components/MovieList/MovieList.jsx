@@ -32,5 +32,3 @@ MovieList.propTypes = {
     }).isRequired
   ).isRequired,
 };
-
-// lazy loading = export default

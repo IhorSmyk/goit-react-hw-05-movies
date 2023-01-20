@@ -10,7 +10,7 @@ export const Loader = () => {
         width="80"
         ariaLabel="dna-loading"
         wrapperClass="dna-wrapper"
-        ballColors={['#ff0000', '#00ff00', '#0000ff']}
+        ballColors={['#394f89', '#9df6fc', '#e0fcfd']}
         backgroundColor="#1a1211"
       />
     </div>

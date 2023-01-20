@@ -14,7 +14,7 @@ function Movies() {
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get('query');
   useEffect(() => {
-    if (query !== null && query.trim() === '') return;
+    if (!query?.trim()) return;
     //v2 if (query.trim().length === 0) return;
 
     const fetchTrends = async query => {

@@ -2,8 +2,6 @@ import { Loader } from 'components/Loader/Loader';
 import { useState, useEffect, Suspense, lazy } from 'react';
 import { useParams, Link, Route, Routes, useLocation } from 'react-router-dom';
 import { getMovieDetails } from 'services/API';
-// import Cast from 'pages/Cast/Cast';
-// import Reviews from 'pages/Reviews/Reviews';
 import { Notify } from 'notiflix';
 import s from './MovieDetails.module.css';
 
