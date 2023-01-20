@@ -1,7 +1,5 @@
-.background {
-  background-color: coral;
-}
-
 .message {
+  margin-top: 15px;
   align-items: center;
+  color: inherit;
 }

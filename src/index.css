@@ -39,11 +39,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to right, #bbeef1, #5fbec4);
+  color: #0d253f;
+  background-image: linear-gradient(to left, #01b4e4, #90cea1);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-

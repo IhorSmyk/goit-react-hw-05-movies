@@ -1,5 +1,11 @@
-.review {
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #333333;
+.list{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.message {
+  margin-top: 15px;
+  color: inherit;
 }

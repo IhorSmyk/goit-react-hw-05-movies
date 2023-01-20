@@ -1,13 +1,7 @@
 import s from './NotFound.module.css';
 
-import React from 'react';
-
 function NotFound() {
-  return (
-    <div className={s.background}>
-      <h4 className={s.message} >Page not found</h4>
-    </div>
-  );
+  return <h4 className={s.message}>Page not found</h4>;
 }
 
 export default NotFound;

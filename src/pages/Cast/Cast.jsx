@@ -49,7 +49,7 @@ function Cast() {
                   }
                   alt={name}
                 />
-                <h4 className={ s.name}>{name}</h4>
+                <h4 className={s.name}>{name}</h4>
               </li>
             );
           })}

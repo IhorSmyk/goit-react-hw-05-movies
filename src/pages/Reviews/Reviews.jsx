@@ -5,9 +5,6 @@ import { getReviews } from 'services/API';
 import { Loader } from 'components/Loader/Loader';
 import s from './Reviews.module.css';
 
-
-
-
 function Reviews() {
   const [movieReviews, setMovieReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -32,25 +29,26 @@ function Reviews() {
 
   useEffect(() => {
     if (error === null) return;
-
     Notify.failure(`some error occured ${error}`);
   }, [error]);
-
-  console.log(movieReviews);
 
   return (
     <>
       {isLoading && <Loader />}
-
-      {Array.isArray(movieReviews) &&
-        movieReviews?.map(el => {
-          return (
-            <li key={el.id}>
-              <h3>{el.author}</h3>
-              <p>{el.content}</p>
-            </li>
-          );
-        })}
+      <ul className={s.list}>
+        {Array.isArray(movieReviews) &&
+          movieReviews?.map(el => {
+            return (
+              <li key={el.id}>
+                <h3>{el?.author}</h3>
+                <p>{el?.content}</p>
+              </li>
+            );
+          })}
+      </ul>
+      {movieReviews.length === 0 && (
+        <h4 className={s.message}>There are no reviews for this movie</h4>
+      )}
     </>
   );
 }

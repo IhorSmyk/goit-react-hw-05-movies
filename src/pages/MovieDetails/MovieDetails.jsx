@@ -15,7 +15,6 @@ function MovieDetails() {
   const [error, setError] = useState(null);
   const { movieId } = useParams();
   const location = useLocation();
-  console.log(location);
 
   useEffect(() => {
     if (!movieId) return;
@@ -76,7 +75,6 @@ function MovieDetails() {
         </div>
       )}
       <div className={s.moreInfo}>
-        {/* <h3 className={ s.moreInfoTitle}>More info</h3> */}
         <Link
           state={{ from: location?.state?.from ?? '/' }}
           className={s.moreInfoLink}
