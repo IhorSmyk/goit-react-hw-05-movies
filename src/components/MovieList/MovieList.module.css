@@ -1,4 +1,12 @@
 .list {
-    padding: 15px;
-    max-width: max-content;
+  padding: 15px;
+  max-width: max-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+
+.item {
+  text-decoration: none;
+  color: #1a1211;
 }
