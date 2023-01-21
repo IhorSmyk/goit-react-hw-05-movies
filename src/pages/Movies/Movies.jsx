@@ -20,6 +20,9 @@ function Movies() {
       try {
         setIsLoading(true);
         const receivedMovies = await getMoviesByQuery(query);
+        if (receivedMovies.length === 0) {
+          Notify.info(`No results for ${query}`);
+        }
         setMovies(receivedMovies);
       } catch (err) {
         setError(err.message);
@@ -37,6 +40,9 @@ function Movies() {
 
   const handleSubmit = e => {
     e.preventDefault();
+    if (e.currentTarget.search.value === '') {
+      Notify.warning('The input field is empty!');
+    }
     setSearchParams({ query: e.currentTarget.search.value });
     e.target.reset();
   };
