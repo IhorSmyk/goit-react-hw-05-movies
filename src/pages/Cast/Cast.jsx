@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Notify } from 'notiflix';
-import { getCast } from 'services/API';
 import { Loader } from 'components/Loader/Loader';
+import { getCast } from 'services/API';
 import s from './Cast.module.css';
 
 function Cast() {

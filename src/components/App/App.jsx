@@ -1,7 +1,7 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
-import { Loader } from 'components/Loader/Loader';
 import clsx from 'clsx';
+import { Loader } from 'components/Loader/Loader';
 import s from './App.module.css';
 
 const Home = lazy(() => import('pages/Home/Home'));

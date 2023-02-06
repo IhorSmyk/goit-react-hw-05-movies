@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { getMoviesByQuery } from 'services/API';
+import { useSearchParams } from 'react-router-dom';
+import { FaSearch } from 'react-icons/fa';
 import { Notify } from 'notiflix';
 import { MovieList } from 'components/MovieList/MovieList';
-import { useSearchParams } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
-import { FaSearch } from 'react-icons/fa';
+import { getMoviesByQuery } from 'services/API';
 import s from './Movies.module.css';
 
 function Movies() {

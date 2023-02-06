@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-// API_KEY: '8bd78ee11f1297c9482ff7b548a73f20',
-//  baseURL: 'https://api.themoviedb.org/3',
-
 const moviesAPI = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
   params: {

@@ -1,9 +1,9 @@
-import { Loader } from 'components/Loader/Loader';
 import { useState, useEffect, Suspense, lazy } from 'react';
 import { useParams, Link, Route, Routes, useLocation } from 'react-router-dom';
-import { getMovieDetails } from 'services/API';
-import { Notify } from 'notiflix';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
+import { Notify } from 'notiflix';
+import { Loader } from 'components/Loader/Loader';
+import { getMovieDetails } from 'services/API';
 import s from './MovieDetails.module.css';
 
 const Cast = lazy(() => import('pages/Cast/Cast'));

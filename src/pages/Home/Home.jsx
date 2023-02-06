@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
-import { getTrends } from 'services/API';
+import { Notify } from 'notiflix';
 import { Loader } from 'components/Loader/Loader';
 import { MovieList } from 'components/MovieList/MovieList';
-import { Notify } from 'notiflix';
+import { getTrends } from 'services/API';
 import s from './Home.module.css';
-
-import React from 'react';
 
 function Home() {
   const [trends, setTrends] = useState([]);
